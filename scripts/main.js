@@ -1,11 +1,16 @@
 const addTask = document.querySelector('#addTask');
 const taskDiv = document.querySelector('#taskDiv');
 const enterTask = document.querySelector('#enterTask');
+const deleteBtn = document.querySelector('#delete');
 
 addTask.addEventListener('click', () => {
+  let task = document.createElement('div');
   let inputTask = document.createElement('input');
   let labelInput = document.createElement('label');
   let checkInput = document.createElement('input');
+
+  task.class = 'taskDiv';
+
 
   //* Input to mark when the task it is done
   inputTask.type = 'radio';
@@ -20,10 +25,19 @@ addTask.addEventListener('click', () => {
   checkInput.class = 'checkDelete';
   checkInput.name = 'deleteChecking';  
   
-  //enterTask.textContent = '';
-  //enterTask.placeholder = 'Ingrese su tarea...';  
+  enterTask.value = '';
+  enterTask.placeholder = 'Ingrese su tarea...';  
     
-  taskDiv.appendChild(inputTask);
-  taskDiv.appendChild(labelInput);
-  taskDiv.appendChild(checkInput);  
+  taskDiv.appendChild(task);
+
+  task.appendChild(inputTask);
+  task.appendChild(labelInput);
+  task.appendChild(checkInput);
+
+  deleteBtn.addEventListener('click', () => {
+    if(checkInput.checked) {
+      task.remove();
+    }
+  });
+
 });
