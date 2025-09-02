@@ -2,6 +2,9 @@ const addTask = document.querySelector('#addTask');
 const taskDiv = document.querySelector('#taskDiv');
 const enterTask = document.querySelector('#enterTask');
 const deleteBtn = document.querySelector('#delete');
+const alertMessage = document.querySelector('#alertMessage');
+
+
 
 addTask.addEventListener('click', () => {
   let task = document.createElement('div');
