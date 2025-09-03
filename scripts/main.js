@@ -7,21 +7,23 @@ const alertMessage = document.querySelector('#alertMessage');
 
 
 addTask.addEventListener('click', () => {
-  let task = document.createElement('div');
-  let inputTask = document.createElement('input');
+  let newTask= document.createElement('div');
+  let task = document.createElement('input');
   let labelInput = document.createElement('label');
   let checkInput = document.createElement('input');
 
-  task.class = 'taskDiv';
+  newTask.id = 'divInputTask';
 
 
   //* Input to mark when the task it is done
-  inputTask.type = 'radio';
-  inputTask.class = 'task';
-  inputTask.name = 'valueTask';
+  task.type = 'radio';
+  task.class = 'taskInput';
+  task.name = 'task';
+  task.id = 'task';
   
   labelInput.textContent = enterTask.value;
   labelInput.name = 'valueTask';
+  labelInput.for = 'task'
 
   //* Input to mark the task we want to delete
   checkInput.type = 'checkbox';
@@ -30,16 +32,24 @@ addTask.addEventListener('click', () => {
   
   enterTask.value = '';
   enterTask.placeholder = 'Ingrese su tarea...';  
+  
     
-  taskDiv.appendChild(task);
+  taskDiv.appendChild(newTask);
 
-  task.appendChild(inputTask);
-  task.appendChild(labelInput);
-  task.appendChild(checkInput);
+  newTask.appendChild(task);
+  newTask.appendChild(labelInput);
+  newTask.appendChild(checkInput);
 
+  labelInput.addEventListener('click', () => {
+    newTask.style.backgroundColor = 'green';
+  })
+
+  if(checkInput.checked) {
+    newTask.style.backgroundColor = 'red';
+  }
   deleteBtn.addEventListener('click', () => {
     if(checkInput.checked) {
-      task.remove();
+      newTask.remove();
     }
   });
 
