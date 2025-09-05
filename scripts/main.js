@@ -25,28 +25,39 @@ addTask.addEventListener('click', () => {
   labelInput.name = 'valueTask';
   labelInput.for = 'task'
 
+  //* Change the background of the newTask
+  labelInput.addEventListener('click', () => {
+    newTask.style.backgroundColor = '#a1c100';
+    newTask.style.color = 'black';
+    newTask.style.fontStyle = 'italic';
+  })
+
   //* Input to mark the task we want to delete
   checkInput.type = 'checkbox';
   checkInput.class = 'checkDelete';
   checkInput.name = 'deleteChecking';  
   
   enterTask.value = '';
-  enterTask.placeholder = 'Ingrese su tarea...';  
+  enterTask.placeholder = 'Ingrese su tarea...'; 
   
-    
+  //* change the background when want to delete a task
+  checkInput.addEventListener('click', () => {
+    if(checkInput.checked) {
+      newTask.style.backgroundColor = '#dd6438';
+    } else {
+      newTask.style.backgroundColor = '#a46385';
+    }
+  })
+
+  
+  //* Adding the task to the body   
   taskDiv.appendChild(newTask);
 
   newTask.appendChild(task);
   newTask.appendChild(labelInput);
   newTask.appendChild(checkInput);
 
-  labelInput.addEventListener('click', () => {
-    newTask.style.backgroundColor = 'green';
-  })
-
-  if(checkInput.checked) {
-    newTask.style.backgroundColor = 'red';
-  }
+  
   deleteBtn.addEventListener('click', () => {
     if(checkInput.checked) {
       newTask.remove();

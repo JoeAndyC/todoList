@@ -39,6 +39,15 @@ label {
 }
 
 #divInputTask {
+    display: flex;
+    flex-direction: row;
     margin-top: 1em;
-    background-color: coral;
+    background-color: #a46385;
+    color: white;
+    height: 50px;
+    font-size: 24px;
+    justify-items: center;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 10, 10, 10, 5 rgba(0, 0, 0, 10%);
 }
