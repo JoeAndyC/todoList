@@ -19,12 +19,13 @@ h2 {
 
 .enterTask {
   background-color: #fbee79;
-  width: 50vw;
+  width: auto;
   height: 90vh;
   border-radius: 25px;
   padding: 15px 20px;
   box-sizing: border-box;
   box-shadow: 0 10px 10px  rgba(0,0,0,25);
+  margin-bottom: 10px;
 }
 
 .inputTask {
@@ -37,7 +38,6 @@ h2 {
   box-sizing: border-box;
   border: none;
   border-radius: 2em;
-  margin-bottom: 30px;
 }
 
 input {
@@ -71,6 +71,17 @@ input::placeholder {
   width: 10em;
   font-weight: bold;
   cursor: pointer;
+  transition: 1s;
+}
+
+.buttonAddTask:hover {
+  opacity: 0.80;
+}
+
+.errorMessage {
+  color:red;
+  margin-bottom: 10px;
+  font-weight: bold;
 }
 
 .task {
@@ -85,6 +96,8 @@ input::placeholder {
   padding: 0.05em;
   border-radius: 2em 0 0 2em;
   box-sizing: border-box;
+  box-shadow: 0 5px 10px   rgba(0,0,0,10);
+  margin-bottom: 20px;
 }
 
 .radioModInput {
@@ -96,6 +109,10 @@ input::placeholder {
   border: solid #1b93a1 2px;
   box-sizing: border-box;
   cursor: pointer;
+}
+
+.taskText {
+  font-size: 2em;
 }
 
 .deletTask {
