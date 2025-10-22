@@ -33,3 +33,23 @@ addTaskButton.addEventListener('click', () => {
   
   newTask.value = '';
 });
+
+// Calling the radioModInput's to make a change when they are selected
+const radioModInputs = document.querySelectorAll('.radioModInput');
+
+radioModInputs.forEach(modInputs => {
+  modInputs.addEventListener('click', function() {
+    if(modInputs.style.backgrounColor == 'fbee79') {
+      modInputs.style.backgrounColor = 'black';
+    }
+  });
+});
+
+
+
+
+
+
+
+
+

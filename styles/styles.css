@@ -111,6 +111,10 @@ input::placeholder {
   cursor: pointer;
 }
 
+.radioModInput.selected {
+  background-color: #1b93a1;
+}
+
 .taskText {
   font-size: 2em;
 }
@@ -120,7 +124,7 @@ input::placeholder {
   width: 8vw;
   height: 5vh;
   border: none;
-  border-radius: 20px 0 0 20px;
+  border-radius: 20px 1px 1px 20px;
   color: white;
   font-weight: bold;
 }
