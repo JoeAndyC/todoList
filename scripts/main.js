@@ -17,27 +17,30 @@ addTaskButton.addEventListener('click', () => {
   const radioModInput = document.createElement('div');
   const taskText = document.createElement('p');
   const deletTask = document.createElement('button');
+  const imgDelete = document.createElement('img')
   
   task.className = 'task';
   radioModInput.className = 'radioModInput';
   taskText.className = 'taskText';
   deletTask.className = 'deletTask';
-  
+  imgDelete.className = 'imagDelete';
+
   taskText.innerText = taskValue;
   tasks.push(taskValue);
-  deletTask.textContent = 'Borrar';
+
+  imgDelete.src = './src/eliminar.png';
+  imgDelete.alt = 'Imagen de Tacho de Basura';
+
   taskList.appendChild(task);
   task.appendChild(radioModInput);
   task.appendChild(taskText);
   task.appendChild(deletTask);
+  deletTask.appendChild(imgDelete);
   
   newTask.value = '';
 });
 
 // Calling the radioModInput's to make a change when they are selected
-const radioModInput = document.querySelector('radioModInput');
-
-
 
 
 
