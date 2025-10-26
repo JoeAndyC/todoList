@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html lang="es-AR">
     <head>
         <title>To Do List</title>
-        <meta charset="UTF -8" />
+        <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0 ">
         <link rel="stylesheet" href="./styles/styles.css" />
         <link rel="icon" type="image/png" href="./src/lista-de-tareas.png" />
@@ -27,7 +27,8 @@
               <div class="taskList">
                 <!-- Example -->
                 <div class="task">
-                  <div class="radioModInput"></div>
+                  <label for="done-task"  class="radioModInput"></label>
+                  <input class="radioInput" type="radio" name="done-task">
                   <p class="taskText">Nueva tarea importante</p>
                   <button class="deletTask">
                     <img  class="imgDelete" src="./src/eliminar.png" alt="Tacho de Basura" />
@@ -35,32 +36,16 @@
                 </div>
                 
                  <div class="task">
-                   <div class="radioModInput"></div>
+                   <label for="done-task" class="radioModInput"></label>
+                   <input class="radioInput" type="radio" name="done-task">
                   <p class="taskText">Nueva tarea importante</p>
                   <button class="deletTask">
                     <img  class="imgDelete" src="./src/eliminar.png" alt="Tacho de Basura" />
                   </button>
                 </div>
                 
-                 <div class="task">
-                   <div class="radioModInput"></div>
-                  <p class="taskText">Nueva tarea importante</p>
-                  <button class="deletTask">
-                    <img class="imgDelete" src="./src/eliminar.png" alt="Tacho de Basura" />
-                  </button>
-                </div>
-                
-                 <div class="task">
-                   <div class="radioModInput"></div>
-                  <p class="taskText">Nueva tarea importante</p>
-                  <button class="deletTask">
-                    <img  class="imgDelete" src="./src/eliminar.png" alt="Tacho de Basura"
-                  </button>
-                </div>
-               
               </div>
             </section>
-            
         </main>
         <footer></footer>
         <script src="./scripts/main.js"></script>
